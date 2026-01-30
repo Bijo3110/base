@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bijo Biju</title>
+</head>
+<body>
+    <h1>Complete Variable:</h1><br> {{questions}}<br>
+
+    <h1>For Loop:</h1><br>
+    {% for question in questions %}
+        <h2>{{question.question_text}} - {{question.pub_date}}</h2>
+    {% endfor %}
+</body>
+</html>
