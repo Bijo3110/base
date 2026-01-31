@@ -8,7 +8,9 @@
 
     <h1>For Loop:</h1><br>
     {% for i in blogs %}
-        <h2>{{i.title}} - {{i.pub_date}}</h2>
+        <h2>
+            <a href="{% url 'blog_detail' i.id %}">{{i.title}}</a> - {{i.pub_date}}
+        </h2>
     {% endfor %}
 
     <form method="POST" action="{% url 'home' %}">

@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from polls.views import HomeView
+from polls.views import HomeView, BlogDetail
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
+    path('blog/<int:pk>', BlogDetail.as_view(), name="blog_detail"),
     path('admin/', admin.site.urls),
 ]
