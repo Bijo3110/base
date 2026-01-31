@@ -11,6 +11,16 @@
         <h2>{{i.title}} - {{i.pub_date}}</h2>
     {% endfor %}
 
-    {{form}}
+    <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+
+        <label for="title">Title</label>
+        {{form.title}}
+        <br>
+        <label for="content">Content</label>
+        {{form.content}}
+        <br>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
