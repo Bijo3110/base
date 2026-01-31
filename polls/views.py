@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from django.views import View
-from .models import Question
+from .models import Blog
 
 # Create your views here.
 
 class HomeView(View):
 
     def get(self, request):
-        questions = Question.objects.all()
+        blogs = Blog.objects.all()
         context = {
-            'questions' : questions
+            'blogs' : blogs
         }
         return render(request, 'home.html', context)
