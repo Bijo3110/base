@@ -7,8 +7,8 @@ from .models import Blog
 class HomeView(View):
 
     def get(self, request):
-        blog = Blog.objects.all()
+        blogs = Blog.objects.all()
         context = {
-            'blog' : blog
+            'blogs' : blogs
         }
         return render(request, 'home.html', context)
