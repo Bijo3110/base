@@ -4,11 +4,11 @@
     <title>Bijo Biju</title>
 </head>
 <body>
-    <h1>Complete Variable:</h1><br> {{questions}}<br>
+    <h1>Complete Variable:</h1><br> {{blogs}}<br>
 
     <h1>For Loop:</h1><br>
-    {% for question in questions %}
-        <h2>{{question.question_text}} - {{question.pub_date}}</h2>
+    {% for i in blogs %}
+        <h2>{{i.title}} - {{i.pub_date}}</h2>
     {% endfor %}
 </body>
 </html>
